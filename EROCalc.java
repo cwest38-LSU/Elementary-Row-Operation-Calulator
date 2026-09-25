@@ -6,9 +6,17 @@ public class EROCalc {
         myMatrix = matrix;
     }
 
-    public int getLength(int row){
-        return myMatrix[(row)].length;
+    public void reset(int[][] matrix){
+        myMatrix = matrix;
     }
+    public int getLength(int row){
+        return myMatrix[row].length;
+    }
+
+    public int getRows(){
+        return myMatrix.length;
+    }
+
     public void add(int num, int row1, int row2){
         for(int i = 0; i < this.getLength(row1); i++){
             myMatrix[(row2)][i] += num * myMatrix[(row1)][i];
